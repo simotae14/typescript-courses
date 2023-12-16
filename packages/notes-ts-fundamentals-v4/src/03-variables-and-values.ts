@@ -1,17 +1,16 @@
 //* Variable Declarations & Inference
 let temperature = 6 //! inference
-/*
-// temperature = "warm"  //! type-checking
-// const humidity = 79  //! literal type
+
+temperature = 'warm' //! type-checking
+let humidity = 79 as 79 //! literal type
 
 //* A type as a set of allowed values
-/*
-// temperature = 23 //✔️ (1)  - re-assignability of a let
-// temperature = humidity; //! (2) - type-checking
-// humidity = temperature; //! (3) - number is not of type `79`
-// humidity = 79; //✔️ (4) - 79 is of type `79`
-// humidity = 78; //! (5) - 78 is not of type `79`
 
+temperature = 23 //✔️ (1)  - re-assignability of a let
+temperature = humidity //! (2) - type-checking
+humidity = temperature //! (3) - number is not of type `79`
+humidity = 79 //✔️ (4) - 79 is of type `79`
+humidity = 78 //! (5) - 78 is not of type `79`
 
 /*
 // let temp2 = 19; //! temp2's type is { all numbers }
