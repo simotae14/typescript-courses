@@ -24,19 +24,17 @@ humid2 = 79 //! Is each member in { 79 } also in { 79 }
 humid2 = 78 //! Is each member in { 78 } also in { 79 }
 
 //* Implicit `any` and type annotations
-/*
+
 // between 500 and 1000
-// export const RANDOM_WAIT_TIME =
-//     Math.round(Math.random() * 500) + 500
+export const RANDOM_WAIT_TIME = Math.round(Math.random() * 500) + 500
 
-// let startTime = new Date()
-// let endTime
+let startTime = new Date()
+let endTime: Date
 
-// setTimeout(() => {
-//     endTime = 0
-//     endTime = new Date()
-// }, RANDOM_WAIT_TIME)
-
+setTimeout(() => {
+  endTime = 0
+  endTime = new Date()
+}, RANDOM_WAIT_TIME)
 
 //* Type Casting
 /*
