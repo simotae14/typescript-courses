@@ -13,17 +13,12 @@ let car: {
 } = myCar
 
 //? A function that prints info about a car to stdout
-function printCar(car?: {
+function printCar(car: {
   make: string
   model: string
   year: number
   chargeVoltage?: number // Optional property
 }) {
-  // type guard
-  if (!car) {
-    console.log('No car to print')
-    return
-  }
   let str = `${car.make} ${car.model} (${car.year})`
   if (typeof car.chargeVoltage === 'number')
     str += `// ${car.chargeVoltage}v`
@@ -50,15 +45,13 @@ printCar({
   chargeVoltage: 220,
 })
 
-/*
 //* Excess property checking
 
-// printCar({
-//     make: "Tesla",
-//     model: "Model 3",
-//     year: 2020,
-//     color: "RED", //? EXTRA PROPERTY
-// })
+printCar({...{
+  make: 'Tesla',
+  model: 'Model 3',
+  year: 2020,
+},...{color: 'RED', //? EXTRA PROPERTY}})
 
 /*
 //* Index signatures
