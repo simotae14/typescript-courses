@@ -112,24 +112,24 @@ myCarRealTuple = ['Honda', 2017, 'Accord'] //! Wrong convention
 myCarRealTuple = [2017, 'Honda', 'Accord', 'Sedan'] //! Too many elements
 
 //*  `readonly` tuples
-/*
-// const numPair: [number, number] = [4, 5]; //✔️ Valid
-// const numTriplet: [number, number, number] = [7]; //! Invalid
 
-// [101, 102, 103].length //? number[].length
-// numPair.length //? [number, number] length
+const numPair: [number, number] = [4, 5] //✔️ Valid
+const numTriplet: [number, number, number] = [7] //! Invalid
 
-// numPair.push(6) // [4, 5, 6]
-// numPair.pop() // [4, 5]
-// numPair.pop() // [4]
-// numPair.pop() // []
+;[101, 102, 103].length //? number[].length
+numPair.length //? [number, number] length
 
-// numPair.length  //! ❌ DANGER ❌
+numPair.push(6) // [4, 5, 6]
+numPair.pop() // [4, 5]
+numPair.pop() // [4]
+numPair.pop() // []
 
-// const roNumPair: readonly [number, number] = [4, 5]
-// roNumPair.length
-// roNumPair.push(6) // [4, 5, 6] //! Not allowed
-// roNumPair.pop() // [4, 5] //! Not allowed
+numPair.length //! ❌ DANGER ❌
+
+const roNumPair: readonly [number, number] = [4, 5]
+roNumPair.length
+roNumPair.push(6) // [4, 5, 6] //! Not allowed
+roNumPair.pop() // [4, 5] //! Not allowed
 
 /**/
 
