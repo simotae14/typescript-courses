@@ -108,8 +108,8 @@ let myCarRealTuple: [number, string, string] = [
   'Toyota',
   'Corolla',
 ]
-// myCar = ["Honda", 2017, "Accord"] //! Wrong convention
-// myCar = [2017, "Honda", "Accord", "Sedan"] //! Too many elements
+myCarRealTuple = ['Honda', 2017, 'Accord'] //! Wrong convention
+myCarRealTuple = [2017, 'Honda', 'Accord', 'Sedan'] //! Too many elements
 
 //*  `readonly` tuples
 /*
