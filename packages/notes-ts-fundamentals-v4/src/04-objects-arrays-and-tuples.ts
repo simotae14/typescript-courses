@@ -92,16 +92,16 @@ const cars = [
 
 //* Tuples
 
-let myCar = [
+let myCarTuple = [
   2002, // Year
   'Toyota', // Make
   'Corolla', // Model
 ]
-const [year, make, model] = myCar //✔️ Destructuring
+const [year, make, model] = myCarTuple //✔️ Destructuring
 
 //? Inference doesn't work very well for tuples
 
-// myCar = ["Honda", 2017, "Accord", "Sedan"] //! Wrong convention
+myCarTuple = ['Honda', 2017, 'Accord', 'Sedan'] //! Wrong convention
 /*
 // let myCar: [number, string, string] = [
 //     2002,
