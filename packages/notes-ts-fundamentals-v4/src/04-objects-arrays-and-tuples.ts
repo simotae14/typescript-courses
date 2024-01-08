@@ -91,16 +91,16 @@ const cars = [
 ]
 
 //* Tuples
-/*
-// let myCar = [
-//     2002,     // Year
-//     "Toyota", // Make
-//     "Corolla" // Model
-// ]
-// const [year, make, model] = myCar //✔️ Destructuring
+
+let myCar = [
+  2002, // Year
+  'Toyota', // Make
+  'Corolla', // Model
+]
+const [year, make, model] = myCar //✔️ Destructuring
 
 //? Inference doesn't work very well for tuples
-/*
+
 // myCar = ["Honda", 2017, "Accord", "Sedan"] //! Wrong convention
 /*
 // let myCar: [number, string, string] = [
