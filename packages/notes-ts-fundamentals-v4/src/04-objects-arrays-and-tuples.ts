@@ -78,8 +78,7 @@ const phones: {
 
 //*  Array Types
 
-/*
-// const fileExtensions = ["js", "ts"]
+const fileExtensions = ['js', 'ts']
 //        ^? string[]
 
 // const cars = [ //? Let's look at an array of objects
@@ -89,7 +88,6 @@ const phones: {
 //         year: 2002,
 //     },
 // ]
-
 
 //* Tuples
 /*
