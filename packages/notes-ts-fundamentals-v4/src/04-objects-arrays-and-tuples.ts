@@ -114,9 +114,8 @@ myCarRealTuple = [2017, 'Honda', 'Accord', 'Sedan'] //! Too many elements
 //*  `readonly` tuples
 
 const numPair: [number, number] = [4, 5] //✔️ Valid
-const numTriplet: [number, number, number] = [7] //! Invalid
-
-;[101, 102, 103].length //? number[].length
+const numTriplet: [number, number, number] = [7][(101, 102, 103)] //! Invalid
+  .length //? number[].length
 numPair.length //? [number, number] length
 
 numPair.push(6) // [4, 5, 6]
