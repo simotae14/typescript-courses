@@ -67,15 +67,15 @@ newYearsEve.getDescription
 // //             ^?
 
 //* Interfaces
-/*
-// interface Amount2 {
-//     currency: string
-//     value: number
-// }
 
-// function printAmount2(amt: Amount2) {
-//     amt
-// }
+interface Amount2 {
+  currency: string | null
+  value: number
+} // | null you cannot use union in interfaces, or at lease outside the interface definition
+
+function printAmount2(amt: Amount2) {
+  amt
+}
 
 //* Inheritance in interfaces
 /*
