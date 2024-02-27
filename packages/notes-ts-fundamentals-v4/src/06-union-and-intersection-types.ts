@@ -14,9 +14,8 @@ type Evens = 2 | 4 | 6 | 8
 let evenNumber: Evens = 2 //✔️ Valid
 evenNumber = 5 //! 5 is not in the set
 
-/*
-// //? A set of numbers from 1 to 5 OR a set of even numbers from 1 to 9
-// let evenOrLowNumber = 5 as Evens | OneThroughFive;
+//? A set of numbers from 1 to 5 OR a set of even numbers from 1 to 9
+let evenOrLowNumber = 5 as Evens | OneThroughFive
 
 /*
 // //? Control flow sometimes results in union types
