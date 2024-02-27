@@ -115,16 +115,18 @@ function careForHamster(h: Hamster) {
 }
 
 //? `implements` keyword
-/*
-// interface AnimalLike {
-//     eat(food): void
-// }
+interface AnimalLike {
+  eat(food: string): void
+}
 
-// class Dog implements AnimalLike {
-//     bark() {
-//         return "woof"
-//     }
-// }
+class Dog implements AnimalLike {
+  bark() {
+    return 'woof'
+  }
+  eat(food: string) {
+    consumeFood(food)
+  }
+}
 /*
 // class LivingOrganism { //? A base class
 //     isAlive() {
