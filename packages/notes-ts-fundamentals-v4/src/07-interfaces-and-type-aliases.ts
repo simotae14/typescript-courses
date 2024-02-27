@@ -172,15 +172,14 @@ class Dog3 implements CanJump, CanBark2 {
 
 //* Open interfaces
 
-/*
-// function feed(animal: AnimalLike) {
-//     animal.eat
-//     animal.isAlive
-// }
-/*
-// interface AnimalLike { //✔️ Additional declaration is OK
-//     isAlive(): boolean
-// }
+function feed(animal: AnimalLike) {
+  if (animal.isAlive()) animal.eat('food')
+}
+
+interface AnimalLike {
+  //✔️ Additional declaration is OK
+  isAlive(): boolean
+}
 
 //* Use case: augmenting existing types
 
