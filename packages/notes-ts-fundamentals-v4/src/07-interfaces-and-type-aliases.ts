@@ -3,22 +3,25 @@ type Amount = {
   currency: string
   value: number
 }
-/*
-// function printAmount(amt: Amount) {
-//     console.log(amt)
 
-//     const { currency, value } = amt
-//     console.log(`${currency} ${value}`)
-// }
+// you can also define type aliases with union types
+type MightBeNull = string | null
 
-// const donation = {
-//     currency: "USD",
-//     value: 30.0,
-//     description: "Donation to food bank",
-// }
+function printAmount(amt: Amount) {
+  console.log(amt)
 
-// printAmount(donation) //✔️ Valid
+  const { currency, value } = amt
+  console.log(`${currency} ${value}`)
+}
 
+const donation = {
+  currency: 'USD',
+  value: 30.0,
+  description: 'Donation to food bank',
+}
+
+// you can pass more than the property needed
+printAmount(donation) //✔️ Valid
 
 //? Let's look at a familiar example from the last chapter
 /*
