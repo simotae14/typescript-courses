@@ -45,28 +45,26 @@ function maybeGetUserInfo() {
 const outcome2 = maybeGetUserInfo()
 
 //* Working with union types
-/*
 //? Think critically: "AND" vs "OR", as it pertains to the contents of the set,
 //? vs the assumptions we can make about the value
-// function printEven(even: Evens): void { }
-// function printLowNumber(lowNum: OneThroughFive): void { }
-// function printEvenNumberUnder5(num: 2 | 4): void { }
-// function printNumber(num: number): void { }
+function printEven(even: Evens): void {}
+function printLowNumber(lowNum: OneThroughFive): void {}
+function printEvenNumberUnder5(num: 2 | 4): void {}
+function printNumber(num: number): void {}
 
-// let x = 5 as Evens | OneThroughFive;
+let x = 5 as Evens | OneThroughFive
 
-/*
 //? What does Evens | OneThroughFive accept as values?
 // let evenOrLowNumber: Evens | OneThroughFive;
-// evenOrLowNumber = 6 //✔️ An even
-// evenOrLowNumber = 3 //✔️ A low number
-// evenOrLowNumber = 4 //✔️ A even low number
+evenOrLowNumber = 6 //✔️ An even
+evenOrLowNumber = 3 //✔️ A low number
+evenOrLowNumber = 4 //✔️ A even low number
 
 //? What requirements can `Evens | OneThroughFive` meet?
-// printEven(x) //! Not guaranteed to be even
-// printLowNumber(x) //! Not guaranteed to be in {1, 2, 3, 4, 5}
-// printEvenNumberUnder5(x) //! Not guaranteed to be in {2, 4}
-// printNumber(x) //✔️ Guaranteed to be a number
+printEven(x) //! Not guaranteed to be even
+printLowNumber(x) //! Not guaranteed to be in {1, 2, 3, 4, 5}
+printEvenNumberUnder5(x) //! Not guaranteed to be in {2, 4}
+printNumber(x) //✔️ Guaranteed to be a number
 
 //* Narrowing with type guards
 /*
