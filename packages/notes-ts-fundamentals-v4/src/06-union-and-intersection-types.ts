@@ -67,15 +67,14 @@ printEvenNumberUnder5(x) //! Not guaranteed to be in {2, 4}
 printNumber(x) //✔️ Guaranteed to be a number
 
 //* Narrowing with type guards
-/*
-// const [first, second] = outcome2
-// if (second instanceof Error) {
-//     // In this branch of your code, second is an Error
-//     second
-// } else {
-//     // In this branch of your code, second is the user info
-//     second
-// }
+const [first, second] = outcome2
+if (second instanceof Error) {
+  // In this branch of your code, second is an Error
+  second
+} else {
+  // In this branch of your code, second is the user info
+  second
+}
 
 //* Discriminated unions
 /*
