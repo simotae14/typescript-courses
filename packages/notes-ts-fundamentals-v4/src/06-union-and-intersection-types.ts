@@ -23,23 +23,26 @@ function flipCoin() {
   return 'tails'
 }
 
-// const outcome = flipCoin()
-// //     ^? "heads" | "tails"
-// //? A more complicated example
+const outcome = flipCoin()
+//     ^? "heads" | "tails"
 
-// const success = ["success", { name: "Mike North", email: "mike@example.com" }] as const
-// const fail = ["error", new Error("Something went wrong!")] as const
+//? A more complicated example with tuples
 
-/*
-// function maybeGetUserInfo() {
-//     if (flipCoin() === "heads") {
-//         return success
-//     } else {
-//         return fail
-//     }
-// }
+const success = [
+  'success',
+  { name: 'Mike North', email: 'mike@example.com' },
+] as const
+const fail = ['error', new Error('Something went wrong!')] as const
 
-// const outcome2 = maybeGetUserInfo()
+function maybeGetUserInfo() {
+  if (flipCoin() === 'heads') {
+    return success
+  } else {
+    return fail
+  }
+}
+
+const outcome2 = maybeGetUserInfo()
 
 //* Working with union types
 /*
