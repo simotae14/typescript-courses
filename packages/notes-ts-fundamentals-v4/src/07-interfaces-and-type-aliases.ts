@@ -127,25 +127,29 @@ class Dog implements AnimalLike {
     consumeFood(food)
   }
 }
-/*
-// class LivingOrganism { //? A base class
-//     isAlive() {
-//         return true
-//     }
-// }
-// interface CanBark { //? Another interface
-//     bark(): string
-// }
-// class Dog2
-//     extends LivingOrganism
-//     implements AnimalLike, CanBark {
-//     bark() {
-//         return "woof"
-//     }
-//     eat(food) {
-//         consumeFood(food)
-//     }
-// }
+
+class LivingOrganism {
+  //? A base class
+  isAlive(): boolean {
+    return true
+  }
+}
+interface CanBark {
+  //? Another interface
+  bark(): string
+}
+
+export interface DogLike extends Animal, AnimalLike, CanBark {}
+
+class Dog2 extends LivingOrganism implements AnimalLike, CanBark {
+  bark() {
+    return 'woof'
+  }
+  eat(food: string) {
+    consumeFood(food)
+  }
+  // we get isAlive from LivingOrganism
+}
 
 //? Implements sometimes works with type aliases
 /*
